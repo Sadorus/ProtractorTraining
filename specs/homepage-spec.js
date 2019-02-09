@@ -8,7 +8,7 @@ beforeEach(async () => {
   browser.get(homePage.path);
 });
 
-describe('Homepage', () => {
+xdescribe('Homepage', () => {
   it('should have a title', () => {
     expect(browser.getTitle()).toEqual('My Store');
   });
