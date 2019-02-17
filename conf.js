@@ -12,6 +12,7 @@ exports.config = {
   suites: {
     homePage: 'specs/homepage-spec.js',
     searchResults: 'specs/search-results-spec.js',
+    ProductListingPage: 'specs/sort-by-spec.js',
   },
   onPrepare: () => {
     jasmine.getEnv().addReporter(new SpecReporter({

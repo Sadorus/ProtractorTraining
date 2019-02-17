@@ -9,5 +9,7 @@ module.exports = class SearchResults {
     this.productMainPicture = element(by.id('bigpic'));
     this.searchQuery = 'Dress';
     this.noResultsQuery = 'zzzzz###';
+    // this.waitForOpacity = () => browser.wait(element => element.getCssValue('opacity')
+    // .then(opacity => opacity === '1'));
   }
 };
