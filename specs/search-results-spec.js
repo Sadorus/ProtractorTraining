@@ -1,7 +1,9 @@
 const SearchResults = require('../page_objects/SearchResults');
 const HomePage = require('../page_objects/HomePage');
+const ProductListingPage = require('../page_objects/ProductListingPage');
 
 const searchResults = new SearchResults();
+const productListingPage = new ProductListingPage();
 const homePage = new HomePage();
 // browser.waitForAngularEnabled(false);
 const EC = protractor.ExpectedConditions;
@@ -15,6 +17,7 @@ describe('Search Results', () => {
     homePage.inputSearchBox.sendKeys(searchResults.noResultsQuery);
     homePage.searchButton.click();
     browser.wait(EC.textToBePresentInElement(searchResults.searchResultsElement, '0 results have been found.'), 5000);
+    browser.sleep(5000);
   });
 
   it('Search for product and check if the first product include query', () => {
